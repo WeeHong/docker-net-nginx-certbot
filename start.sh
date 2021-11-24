@@ -5,9 +5,9 @@ sh ./docker-install.sh
 readonly DOTNET_SERVICE="dotnet-api"
 readonly NGINX_SERVICE="dotnet-nginx"
 readonly CERTBOT_SERVICE="dotnet-certbot"
-readonly DOMAIN=(experiment.weehong.xyz)
+readonly DOMAIN=(<domain>)
 readonly CERTBOT_PATH="./certbot"
-readonly EMAIL="weehongkane@gmail.com"
+readonly EMAIL="<email>"
 readonly IS_STAGING=0
 
 # Check docker exists
