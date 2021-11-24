@@ -7,6 +7,9 @@ readonly CERTBOT_PATH="./certbot"
 readonly EMAIL="<email>"
 readonly IS_STAGING=0
 
+chmod u+x docker-install.sh
+sh ./docker-install.sh
+
 # Check docker exists
 if [ ! -x "$(command -v docker)" ] && [ ! -x "$(command -v docker-compose)" ]; then
   exit

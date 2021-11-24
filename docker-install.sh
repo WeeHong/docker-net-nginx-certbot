@@ -1,12 +1,11 @@
 #!/bin/bash
 
-echo -e "Checking Docker and Docker Compose exist ..."
+echo "Checking Docker exist ..."
 if [ -x "$(command -v docker)" ]; then
     echo "Docker exists. Proceed to next step."
-    exit
     # command
 else
-    echo -e "Docker cannot be found in the system."
+    echo "Docker cannot be found in the system."
     read -p "Do you want to install Docker? (y/N) " decision
     if [ "$decision" != "Y" ] && [ "$decision" != "y" ]; then
         exit
@@ -18,7 +17,7 @@ else
         exit
     fi
 
-    echo -e "Installing ..."
+    echo "Installing ..."
     sudo apt-get install \
         ca-certificates \
         curl \
@@ -35,16 +34,15 @@ else
 
     sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-    echo -e "Completed."
+    echo "Completed."
 fi
 
 
-echo -e "Checking Docker Compose exists ..."
+echo "Checking Docker Compose exists ..."
 if [ -x "$(command -v docker-compose)" ]; then
     echo "Docker compose exists. Proceed to next step."
-    exit
 else
-    echo -e "Docker Compose cannot be found in the system."
+    echo "Docker Compose cannot be found in the system."
     read -p "Do you want to install Docker Compose? (y/N) " decision
     if [ "$decision" != "Y" ] && [ "$decision" != "y" ]; then
         exit
@@ -60,5 +58,6 @@ else
 
     sudo chmod +x /usr/local/bin/docker-compose
 
-    echo -e "Completed."
+    echo "Completed."
 fi
+exit
