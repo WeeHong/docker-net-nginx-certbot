@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj": {}
+    "/home/weehong/workspace/docker/sample/dotnet/DockerDotNET.csproj": {}
   },
   "projects": {
-    "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj": {
+    "/home/weehong/workspace/docker/sample/dotnet/DockerDotNET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj",
+        "projectUniqueName": "/home/weehong/workspace/docker/sample/dotnet/DockerDotNET.csproj",
         "projectName": "DockerDotNET",
-        "projectPath": "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj",
+        "projectPath": "/home/weehong/workspace/docker/sample/dotnet/DockerDotNET.csproj",
         "packagesPath": "/home/weehong/.nuget/packages/",
-        "outputPath": "/home/weehong/workspace/cs/DockerDotNET/obj/",
+        "outputPath": "/home/weehong/workspace/docker/sample/dotnet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/weehong/.nuget/NuGet/NuGet.Config"

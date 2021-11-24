@@ -1,21 +1,13 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS publish
 WORKDIR /app
-EXPOSE 5000
 
-ENV ASPNETCORE_URLS=http://+:5000
+COPY ./dotnet/*.csproj .
+RUN dotnet restore
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["DockerDotNET.csproj", "./"]
-RUN dotnet restore "DockerDotNET.csproj"
-COPY . .
-WORKDIR "/src/."
-RUN dotnet build "DockerDotNET.csproj" -c Release -o /app/build
+COPY ./dotnet/ .
+RUN dotnet publish -c Release -o /app/publish
 
-FROM build AS publish
-RUN dotnet publish "DockerDotNET.csproj" -c Release -o /app/publish
-
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DockerDotNET.dll"]

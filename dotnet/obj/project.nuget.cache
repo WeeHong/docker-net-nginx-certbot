@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KnGkuBSdrfEDv1+DGWt7c/iD1ShIiI8PxKZJKYG5zIapeIvOG5Qb28QGN+dEjggCU5l05LS4hblZkeeCHfhPag==",
+  "dgSpecHash": "fytGsojq5Cufg3EvSE1aU7CzOriCHgzepZPHHXfNCCvJlS2jPjQ9bZnXQnQHeuMv8n0Vg6Iaw3lOoajhMV5cBQ==",
   "success": true,
-  "projectFilePath": "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj",
+  "projectFilePath": "/home/weehong/workspace/docker/sample/dotnet/DockerDotNET.csproj",
   "expectedPackageFiles": [
     "/home/weehong/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/home/weehong/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
