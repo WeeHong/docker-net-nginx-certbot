@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "KnGkuBSdrfEDv1+DGWt7c/iD1ShIiI8PxKZJKYG5zIapeIvOG5Qb28QGN+dEjggCU5l05LS4hblZkeeCHfhPag==",
+  "success": true,
+  "projectFilePath": "/home/weehong/workspace/cs/DockerDotNET/DockerDotNET.csproj",
+  "expectedPackageFiles": [
+    "/home/weehong/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/home/weehong/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/weehong/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/home/weehong/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/home/weehong/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/home/weehong/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

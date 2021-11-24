@@ -1,0 +1,11 @@
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/DockerDotNET
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/appsettings.Development.json
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/appsettings.json
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/DockerDotNET.dll
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/DockerDotNET.deps.json
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/DockerDotNET.runtimeconfig.json
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/DockerDotNET.pdb
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/Microsoft.OpenApi.dll
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/weehong/workspace/cs/DockerDotNET/bin/Release/net6.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
