@@ -5,9 +5,9 @@ sh ./docker-install.sh
 readonly DOTNET_SERVICE="dotnet-api"
 readonly NGINX_SERVICE="dotnet-nginx"
 readonly CERTBOT_SERVICE="dotnet-certbot"
-readonly DOMAIN=(experiment.weehong.xyz)
+readonly DOMAIN=(<domain>)
 readonly CERTBOT_PATH="./certbot"
-readonly EMAIL="weehongkane@gmail.com"
+readonly EMAIL="<email>"
 readonly IS_STAGING=0
 
 # Check docker exists
@@ -35,7 +35,7 @@ if [ ! -e "certbot/conf/options-ssl-nginx.conf" ] || [ ! -e "certbot/conf/ssl-dh
   echo "Downloading recommended TLS parameters: DONE"
 fi
 
-# Generate self-signed certificate
+# Generate self-signed dummy certificate
 echo -e "Generating self-signed certificate ...\n"
 SSL_PATH="/etc/letsencrypt/live/$DOMAIN"
 sudo mkdir -p "$CERTBOT_PATH/conf/live/$DOMAIN"
