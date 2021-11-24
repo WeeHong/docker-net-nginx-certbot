@@ -3,6 +3,8 @@ This repository is for my learning purpose of using Docker.
 
 This project managed to bundle up everything with one-click.
 
+The script will check whether Docker and Docker Compose have been installed before proceed.
+
 A big thanks to Tony Sneed and Philipp for their guide.
 
 ## References
