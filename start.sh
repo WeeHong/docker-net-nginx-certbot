@@ -7,6 +7,11 @@ readonly CERTBOT_PATH="./certbot"
 readonly EMAIL="<email>"
 readonly IS_STAGING=0
 
+# Check docker exists
+if [ ! -x "$(command -v docker)" ] && [ ! -x "$(command -v docker-compose)" ]; then
+  exit
+fi
+
 # Check the existence of $CERTBOT_PATH
 if [ ! -d "$CERTBOT_PATH" ]; then
     echo -e "Creating directory ...\n"
