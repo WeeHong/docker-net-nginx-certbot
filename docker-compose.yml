@@ -11,6 +11,8 @@ services:
     ports:
       - 80:80
       - 443:443
+    depends_on:
+      - dotnet-api
     networks:
       - nginx-network
     restart: unless-stopped
@@ -21,8 +23,6 @@ services:
       dockerfile: Dockerfile
     expose:
       - 5000
-    depends_on:
-      - dotnet-nginx
     networks:
       - nginx-network
     restart: unless-stopped
