@@ -1,17 +1,18 @@
 #!/bin/bash
-readonly DOTNET_SERVICE="dotnet-api"
-readonly NGINX_SERVICE="dotnet-nginx"
-readonly CERTBOT_SERVICE="dotnet-certbot"
-readonly DOMAIN=(<domain>)
-readonly CERTBOT_PATH="./certbot"
-readonly EMAIL="<email>"
-readonly IS_STAGING=0
-
 chmod u+x docker-install.sh
 sh ./docker-install.sh
 
+readonly DOTNET_SERVICE="dotnet-api"
+readonly NGINX_SERVICE="dotnet-nginx"
+readonly CERTBOT_SERVICE="dotnet-certbot"
+readonly DOMAIN=(experiment.weehong.xyz)
+readonly CERTBOT_PATH="./certbot"
+readonly EMAIL="weehongkane@gmail.com"
+readonly IS_STAGING=0
+
 # Check docker exists
 if [ ! -x "$(command -v docker)" ] && [ ! -x "$(command -v docker-compose)" ]; then
+echo -e "Docker and Docker Compose does not exist."
   exit
 fi
 
@@ -26,11 +27,12 @@ fi
 
 # Download Nginx SSL config and DH Param
 if [ ! -e "certbot/conf/options-ssl-nginx.conf" ] || [ ! -e "certbot/conf/ssl-dhparams.pem" ]; then
-  echo "### Downloading recommended TLS parameters ..."
+  echo "Downloading recommended TLS parameters ..."
   sudo mkdir -p "$CERTBOT_PATH/conf"
   sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/_internal/tls_configs/options-ssl-nginx.conf > "$CERTBOT_PATH/conf/options-ssl-nginx.conf"
   sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/certbot/ssl-dhparams.pem > "$CERTBOT_PATH/conf/ssl-dhparams.pem"
   echo
+  echo "Downloading recommended TLS parameters: DONE"
 fi
 
 # Generate self-signed certificate

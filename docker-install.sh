@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Checking Docker exist ..."
 if [ -x "$(command -v docker)" ]; then
     echo "Docker exists. Proceed to next step."
@@ -11,8 +10,7 @@ else
         exit
     fi
 
-    if ! command -v apt-get &> /dev/null 
-    then
+    if [ ! -x "$(command -v apt-get &> /dev/null)" ]; then
         echo "apt-get command could not be found"
         exit
     fi
@@ -22,7 +20,7 @@ else
         ca-certificates \
         curl \
         gnupg \
-        lsb-release
+        lsb-release -y
 
     curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
@@ -48,8 +46,7 @@ else
         exit
     fi
 
-    if ! command -v apt-get &> /dev/null 
-    then
+    if [ ! -x "$(command -v apt-get &> /dev/null)" ]; then
         echo "apt-get command could not be found"
         exit
     fi
@@ -60,4 +57,8 @@ else
 
     echo "Completed."
 fi
+
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
 exit
