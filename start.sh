@@ -35,7 +35,7 @@ if [ ! -e "certbot/conf/options-ssl-nginx.conf" ] || [ ! -e "certbot/conf/ssl-dh
   echo "Downloading recommended TLS parameters: DONE"
 fi
 
-# Generate self-signed certificate
+# Generate self-signed dummy certificate
 echo -e "Generating self-signed certificate ...\n"
 SSL_PATH="/etc/letsencrypt/live/$DOMAIN"
 sudo mkdir -p "$CERTBOT_PATH/conf/live/$DOMAIN"
