@@ -1,14 +1,23 @@
 #!/bin/bash
-chmod u+x docker-install.sh
-sh ./docker-install.sh
+read -p "Enter your domain: " domain
+export DOMAIN_NAME=$domain
+
+read -p "Enter your email: " email
+
+echo "Is this staging? (Testing Purpose)"
+read -p "1 = yes, 0 = no: " staging
+echo
 
 readonly DOTNET_SERVICE="dotnet-api"
 readonly NGINX_SERVICE="dotnet-nginx"
 readonly CERTBOT_SERVICE="dotnet-certbot"
-readonly DOMAIN=(<domain>)
-readonly CERTBOT_PATH="./certbot"
-readonly EMAIL="<email>"
-readonly IS_STAGING=0
+readonly DOMAIN=($domain)
+readonly CERTBOT_PATH=./certbot
+readonly EMAIL=$email
+readonly IS_STAGING=$staging
+
+chmod u+x docker-install.sh
+sh ./docker-install.sh
 
 # Check docker exists
 if [ ! -x "$(command -v docker)" ] && [ ! -x "$(command -v docker-compose)" ]; then
