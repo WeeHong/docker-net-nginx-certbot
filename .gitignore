@@ -1,3 +1,38 @@
 .vscode
 .idea
 .env
+
+# From .NET Core 3.0 you can use the command: `dotnet new gitignore` to generate a customizable .gitignore file
+
+./dotnet/*.swp
+./dotnet/*.*~
+./dotnet/project.lock.json
+./dotnet/.DS_Store
+./dotnet/*.pyc
+
+# Visual Studio Code
+./dotnet/.vscode
+
+# User-specific files
+./dotnet/*.suo
+./dotnet/*.user
+./dotnet/*.userosscache
+./dotnet/*.sln.docstates
+
+# Build results
+./dotnet/[Dd]ebug/
+./dotnet/[Dd]ebugPublic/
+./dotnet/[Rr]elease/
+./dotnet/[Rr]eleases/
+./dotnet/x64/
+./dotnet/x86/
+./dotnet/build/
+./dotnet/bld/
+./dotnet/[Bb]in/
+./dotnet/[Oo]bj/
+./dotnet/msbuild.log
+./dotnet/msbuild.err
+./dotnet/msbuild.wrn
+
+# Visual Studio 2015
+./dotnet/.vs/
