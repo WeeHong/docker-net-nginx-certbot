@@ -59,7 +59,6 @@ echo -e "Generate self-signed certificate successfully.\n"
 # Start Nginx service
 echo -e "Starting Nginx and Web API ..."
 docker-compose up --force-recreate -d $NGINX_SERVICE
-docker-compose up --force-recreate -d $DOTNET_SERVICE
 
 # echo "### Deleting dummy certificate for $DOMAIN ..."
 docker-compose run --rm --entrypoint "\
