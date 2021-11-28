@@ -47,7 +47,6 @@ fi
 # Generate self-signed dummy certificate
 echo -e "Generating self-signed certificate ...\n"
 SSL_PATH="/etc/letsencrypt/live/$DOMAIN"
-sudo mkdir -p "$CERTBOT_PATH/conf/live/$DOMAIN"
 docker-compose run --rm --entrypoint "\
     openssl req -x509 -nodes \
     -days 365 \
